@@ -1,50 +1,60 @@
-/*-----------------------------------------layout*/
+/* =========================================
+   1. RESET PREESTABLECIDO + BASE GLOBAL
+========================================= */
 body {
-    width: 100%;
-    height: 100%;
+    /* Reset */
     margin: 0;
 
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 1.5;
+    /* 2. Layout de etiquetas */
+    width: 100%;
+    height: 100%;
 
+    /* 5. Apariencia */
     color: rgba(23, 21, 20, 1);
     background-color: rgba(250, 250, 250, 0.5);
+
+    /* 6. Contenido / Personalización */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
 }
-
-
-/* --------------------------------- Barra de Navegacion*/
+/* ------------------------------------------   BARRA DE NAVEGACIÓN
+ ------------------------------------------ */
 .siteHeader {
-    /* Box Model */
+    /* 3. Box Model */
     padding: 16px;
 
-    /* Layout Interno */
+    /* 4. Layout Interno */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .mainNav .navList {
+    /* 4. Layout Interno */
     display: flex;
     gap: 1rem;
 }
 
 .navLink {
-    /* Apariencia */
+    /* 5. Apariencia */
     color: rgb(137, 147, 137);
 }
 
-/* --------------------------------- Hero*/
+/*  ------------------------------------------   HERO
+ ------------------------------------------ */
 .hero {
-    /* Box Model */
+    /* 2. Layout de etiquetas */
+    height: 90vh;
+
+    /* 3. Box Model */
     padding: 64px;
 
-    /* Layout Interno */
+    /* 4. Layout Interno */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
 
-    /* Apariencia */
+    /* 5. Apariencia */
     background-image:
         linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
         url(Assets/Hero4.png);
@@ -52,142 +62,257 @@ body {
     background-repeat: no-repeat;
 }
 
+/* -------- Contenido HERO -------- */
 .heroTitle {
-    /* Apariencia */
+    /* 5. Apariencia */
+    color: #fff;
+    /* 6. Contenido */
     font-size: 64px;
     font-weight: lighter;
-    color: #fff;
+
 }
 
 .heroText {
-    /* Apariencia */
+    /* 5. Apariencia */
+    color: #fff;
+    /* 6. Contenido */
     font-size: 24px;
     font-weight: lighter;
-    color: #fff;
+
 }
 
 .heroButton {
-    /* Apariencia */
+    /* 2. Layout */
+    width: fit-content;
+
+    /* 3. Box Model */
     padding: 12px;
+
+    /* 5. Apariencia */
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    width: fit-content;
+
 }
 
-/* --------------------------------- Inspiran*/
+/*  ------------------------------------------   PROYECTOS
+ ------------------------------------------ */
 .projects {
-    /* Box Model */
+    /* 3. Box Model */
     padding-top: 144px;
 }
 
+.sectionTitle {
+    /* 6. Contenido */
+    font-size: 32px;
+}
 
+/* -------- Contenido Cards -------- */
+.projectContent {
+    /* 3. Box Model */
+    padding: 24px;
+}
 
+.projectTitle {
+    /* 6. Contenido */
+    font-size: 24px;
+    font-weight: lighter;
+}
+
+.projectDescription {
+    /* 6. Contenido */
+    font-size: 16px;
+}
+
+.projectMeta {
+    /* 5. Apariencia */
+    color: gray;
+    
+    /* 6. Contenido */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+}
+
+/*  ------------------------------------------   PROYECTOS DESTACADOS
+ ------------------------------------------ */
 .projectsFeatured {
-    /* Box Model */
-    padding: 32px 64px 64px 64px;
+    /* 3. Box Model */
+    padding: 32px 64px 32px 64px;
 
-    /* Layout Interno */
+    /* 4. Layout Interno */
     display: flex;
     gap: 20px;
     align-items: stretch;
 }
 
 .projectCard {
-    /* Apariencia */
+    /* 5. Apariencia */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .projectCard--featured {
+    /* 4. Layout Interno */
     flex: 3;
 }
 
 .projectCard--secondary {
+    /* 4. Layout Interno */
     flex: 1;
 }
 
-/*--------------------------Nunca Pasan De Moda*/
+/*  ------------------------------------------   PROYECTOS ARCHIVE
+ ------------------------------------------ */
 .projectsArchive {
-    /* Box Model */
+    /* 3. Box Model */
     padding-bottom: 144px;
 
-    /* Apariencia */
+    /* 4. Layout Interno */
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+
+    /* 5. Apariencia */
     background-color: rgba(244, 240, 237, 0.5);
+    overflow: hidden;
 }
 
 .projectsGrid {
-    /* Box Model */
-    padding: 32px 64px 64px 64px;
+    /* 3. Box Model */
+    padding: 32px 64px 32px 64px;
 
-    /* Layout Interno */
+    /* 4. Layout Interno */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
 }
 
-.projectCard {
-    /*Box Model*/
-    padding-bottom: 88px;
-    /*Apariencia*/
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
+/* -------- Posicionamiento GRID -------- */
+.projectCard.One {
+    grid-column: span 2;
 }
 
-.projectContent {
-    /* Box Model */
-    padding: 24px;
+.projectCard.Two {
+    grid-column: span 2;
+    grid-column-start: 3;
 }
 
-.projectCard.One{
-    grid-column: span 2 / span 2;
-}
-.projectCard.Two{
-    grid-column: span 2 / span 2;
-  grid-column-start: 3;
-}
-.projectCard.Three{
-     grid-column: span 2 / span 2;
-  grid-column-start: 5;
-}
-.projectCard.Four{
-      grid-column: span 3 / span 3;
-  grid-row-start: 2;
-}
-.projectCard.Five{
-     grid-column: span 3 / span 3;
-  grid-column-start: 4;
-  grid-row-start: 2;
-}
-.projectCard.Six{
-      grid-column: span 4 / span 4;
-  grid-column-start: 2;
-  grid-row-start: 3;
+.projectCard.Three {
+    grid-column: span 2;
+    grid-column-start: 5;
 }
 
+.projectCard.Four {
+    grid-column: span 3;
+    grid-row-start: 2;
+}
 
-/* --------------------------------- Frase Arquitectonica*/
+.projectCard.Five {
+    grid-column: span 3;
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.projectCard.Six {
+    grid-column: span 4;
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+/* -------- Media -------- */
+.projectMediaModa {
+    /* 2. Layout */
+    width: 100%;
+    height: 80%;
+
+    /* 5. Apariencia */
+    overflow: hidden;
+}
+
+.projectMediaModa img {
+    /* 2. Layout */
+    width: 100%;
+    height: 100%;
+
+    /* 5. Apariencia */
+    object-fit: cover;
+    display: block;
+}
+
+/*  ------------------------------------------   FRASE ARQUITECTÓNICA
+ ------------------------------------------ */
 .quote {
-    /* Box Model */
+    /* 3. Box Model */
     padding: 144px 0;
 
-    /* Apariencia */
+    /* 4. Layout Interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* 5. Apariencia */
     background-image:
         linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
         url(Assets/OctavioPaz.png);
     background-position: center;
     background-size: cover;
+    /* 6. Contenido */
+    text-align: center;
+
 }
 
-/* --------------------------------- Newsletter*/
+.quoteText {
+    /* 5. Apariencia */
+    color: #fff;
+    /* 6. Contenido */
+    font-size: 64px;
+    font-weight: lighter;
+
+}
+
+/*  ------------------------------------------   NEWSLETTER
+ ------------------------------------------ */
 .newsletter {
-    /* Box Model */
-    padding: 144px 0;
+    /* 2. Layout */
+    width: 100%;
+
+    /* 3. Box Model */
+    padding-top: 144px;
+    padding-bottom: 144px;
+
+
+    /* 4. Layout Interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* 5. Apariencia */
+    background-color: rgba(244, 240, 237, 0.5);
+
+    /* 6. Contenido */
+    text-align: center;
+
 }
 
-/* --------------------------------- Footer*/
+.newsletterText {
+    /* 6. Contenido */
+    font-size: 16px;
+}
+
+/*  ------------------------------------------   FOOTER
+ ------------------------------------------ */
 .siteFooter {
-    /* Box Model */
+    /* 3. Box Model */
     padding: 64px;
+}
+
+.footerTitle {
+    /* 6. Contenido */
+    font-weight: bold;
+}
+
+.footerText {
+    /* 6. Contenido */
+    font-size: 14px;
 }
