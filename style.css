@@ -1,6 +1,49 @@
+/*Layout*/
 body {
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
   color: rgba(23, 21, 20, 1);
   background-color: rgba(250, 250, 250, 0.5);
 }
+
+/*Box Model*/
+.header {
+  padding: 16px;
+}
+
+.proyectos {
+  padding-top: 144px;
+}
+
+.contenedorProjectosQueInspiran {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.txtCard {
+  padding: 24px;
+}
+
+.proyectosModa {
+  padding-bottom: 144px;
+}
+
+.contenedorProjectosQueNuncaPasanDeModa {
+  padding-top: 32px;
+  padding-bottom: 64px;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+.fraseArquitectonica {
+  padding-top: 144px;
+  padding-bottom: 144px;
+}
+
+.newsletter {
+  padding-top: 144px;
+  padding-bottom: 144px;
+}
+
