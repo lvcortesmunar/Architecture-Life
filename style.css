@@ -1,49 +1,124 @@
-/*Layout*/
+/*layout*/
 body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+
   font-family: Georgia, 'Times New Roman', Times, serif;
   line-height: 1.5;
+
   color: rgba(23, 21, 20, 1);
   background-color: rgba(250, 250, 250, 0.5);
 }
 
-/*Box Model*/
-.header {
+/* =========================
+   SITE HEADER
+========================= */
+.siteHeader {
+  /* Box Model */
   padding: 16px;
+
+  /* Layout Interno */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.proyectos {
+/* =========================
+   NAVIGATION
+========================= */
+.mainNav .navList {
+  /* Layout Interno */
+  display: flex;
+  gap: 1rem;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  /* Box Model */
+  padding: 64px;
+
+  /* Layout Interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90vh;
+}
+
+/* =========================
+   PROJECTS SECTION
+========================= */
+.projects {
+  /* Box Model */
   padding-top: 144px;
 }
 
-.contenedorProjectosQueInspiran {
-  padding-top: 32px;
-  padding-bottom: 64px;
-  padding-left: 64px;
-  padding-right: 64px;
+/* =========================
+   PROJECTS FEATURED
+========================= */
+.projectsFeatured {
+  /* Box Model */
+  padding: 32px 64px 64px 64px;
+
+  /* Layout Interno */
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
 }
 
-.txtCard {
+.projectCard--featured {
+  /* Layout Interno */
+  flex: 3;
+}
+
+.projectCard--secondary {
+  /* Layout Interno */
+  flex: 1;
+}
+
+/* =========================
+   PROJECTS GRID
+========================= */
+.projectsGrid {
+  /* Box Model */
+  padding: 32px 64px 64px 64px;
+
+  /* Layout Interno */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+.projectContent {
+  /* Box Model */
   padding: 24px;
 }
 
-.proyectosModa {
-  padding-bottom: 144px;
+/* =========================
+   QUOTE SECTION
+========================= */
+.quote {
+  /* Box Model */
+  padding: 144px 0;
 }
 
-.contenedorProjectosQueNuncaPasanDeModa {
-  padding-top: 32px;
-  padding-bottom: 64px;
-  padding-left: 64px;
-  padding-right: 64px;
-}
-
-.fraseArquitectonica {
-  padding-top: 144px;
-  padding-bottom: 144px;
-}
-
+/* =========================
+   NEWSLETTER
+========================= */
 .newsletter {
-  padding-top: 144px;
-  padding-bottom: 144px;
+  /* Box Model */
+  padding: 144px 0;
 }
 
+/* =========================
+   SITE FOOTER
+========================= */
+.siteFooter {
+  /* Box Model */
+  padding: 64px;
+}
