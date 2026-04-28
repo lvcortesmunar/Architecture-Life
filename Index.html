@@ -9,165 +9,201 @@
 
 <body>
 
-    <!-- HEADER / NAVEGACIÓN GLOBAL -->
-    <header>
+    <!-- HEADER GLOBAL -->
+    <header class="siteHeader">
 
-        <!-- NAV PRINCIPAL -->
-        <nav>
-            <ul>
-                <li><a href="#">Awards</a></li>
-                <li><a href="#">Diseño</a></li>
-                <li><a href="#">Arquitectura</a></li>
+        <nav class="mainNav">
+            <ul class="navList">
+                <li class="navItem"><a class="navLink" href="#">Awards</a></li>
+                <li class="navItem"><a class="navLink" href="#">Diseño</a></li>
+                <li class="navItem"><a class="navLink" href="#">Arquitectura</a></li>
             </ul>
         </nav>
 
-        <!-- LOGO -->
-        <a href="#">
-            <img src="" alt="Architecture Life">
+        <a class="logo" href="#">
+            <img class="logoImage" src="" alt="Architecture Life">
         </a>
 
-        <!-- BÚSQUEDA -->
-        <form>
-            <input type="search" placeholder="Buscar...">
+        <form class="searchForm">
+            <input class="searchInput" type="search" placeholder="Buscar...">
         </form>
 
     </header>
 
-    <main>
+    <main class="mainContent">
 
-        <!-- HERO / INTRODUCCIÓN PRINCIPAL -->
-        <section>
-            <h1>Un Museo Vivo de Admiración</h1>
-            <p>Descubre, aprende e inspírate con una curaduría sensorial de arquitectura y diseño.</p>
-            <a href="#">Explorar proyectos</a>
+        <!-- HERO -->
+        <section class="hero">
+
+            <h1 class="heroTitle">Un Museo Vivo de Admiración</h1>
+
+            <p class="heroText">
+                Descubre, aprende e inspírate con una curaduría sensorial de arquitectura y diseño.
+            </p>
+
+            <a class="heroButton" href="#">Explorar proyectos</a>
+
         </section>
 
-        <!-- SECCIÓN: PROYECTOS -->
-        <section>
+        <!-- PROYECTOS -->
+        <section class="projects">
 
-            <!-- HEADER DE SECCIÓN -->
-            <header>
-                <h2>Proyectos que inspiran</h2>
+            <header class="sectionHeader">
+                <h2 class="sectionTitle">Proyectos que inspiran</h2>
             </header>
 
-            <!-- CARDS DESTACADAS -->
-            <section>
+            <!-- DESTACADOS -->
+            <section class="projectsFeatured">
 
-                <!-- CARD PRINCIPAL -->
-                <article>
-                    <a href="#">
-                        <figure>
-                            <img src="Assets/PabellonContemporaneo.png" alt="Pabellon Contemporaneo">
+                <article class="projectCard projectCard--featured">
+
+                    <a class="projectLink" href="#">
+
+                        <figure class="projectMedia">
+                            <img class="projectImage" src="Assets/PabellonContemporaneo.png" alt="Pabellon Contemporaneo">
                         </figure>
-                        <div>
-                            <p>Awards Abril 2023</p>
-                            <h3>Pabellon Contemporaneo</h3>
-                            <p>Un pabellon estructural que redefine la relación entre arquitectura y paisaje.</p>
+
+                        <div class="projectContent">
+
+                            <p class="projectMeta">Awards Abril 2023</p>
+                            <h3 class="projectTitle">Pabellon Contemporaneo</h3>
+                            <p class="projectDescription">
+                                Un pabellon estructural que redefine la relación entre arquitectura y paisaje.
+                            </p>
+
                         </div>
+
                     </a>
+
                 </article>
 
-                <!-- CARD SECUNDARIA -->
-                <article>
-                    <a href="#">
-                        <figure>
-                            <img src="Assets/SaladeEstarContemporanea.png" alt="Sala de Estar Contemporanea">
+                <article class="projectCard projectCard--secondary">
+
+                    <a class="projectLink" href="#">
+
+                        <figure class="projectMedia">
+                            <img class="projectImage" src="Assets/SaladeEstarContemporanea.png" alt="Sala de Estar Contemporanea">
                         </figure>
-                        <div>
-                            <p>Diseño Mayo 2023</p>
-                            <h3>Sala de Estar Contemporanea</h3>
-                            <p>Un espacio que fusiona lujo y funcionalidad.</p>
+
+                        <div class="projectContent">
+
+                            <p class="projectMeta">Diseño Mayo 2023</p>
+                            <h3 class="projectTitle">Sala de Estar Contemporanea</h3>
+                            <p class="projectDescription">
+                                Un espacio que fusiona lujo y funcionalidad.
+                            </p>
+
                         </div>
+
                     </a>
+
                 </article>
 
             </section>
 
-            <!-- SUBSECCIÓN: PROYECTOS QUE NUNCA PASAN DE MODA -->
-            <section>
+            <!-- PROYECTOS LONG LIFE -->
+            <section class="projectsArchive">
 
-                <header>
-                    <h2>Proyectos que nunca pasan de moda</h2>
+                <header class="sectionHeader">
+                    <h2 class="sectionTitle">Proyectos que nunca pasan de moda</h2>
                 </header>
 
-                <section>
+                <section class="projectsGrid">
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/FachadaUrbanaalAtardecer.png" alt="Fachada Urbana al Atardecer">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/FachadaUrbanaalAtardecer.png" alt="Fachada Urbana al Atardecer">
                             </figure>
-                            <div>
-                                <p>Arquitectura Enero 2024</p>
-                                <h3>Fachada Urbana al Atardecer</h3>
-                                <p>Una fachada moderna que refleja los colores del cielo.</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Arquitectura Enero 2024</p>
+                                <h3 class="projectTitle">Fachada Urbana al Atardecer</h3>
+                                <p class="projectDescription">Una fachada moderna que refleja los colores del cielo.</p>
                             </div>
                         </a>
+
                     </article>
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/CasaBlancaMediterranea.png" alt="Casa Blanca Mediterranea">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/CasaBlancaMediterranea.png" alt="Casa Blanca Mediterranea">
                             </figure>
-                            <div>
-                                <p>Awards Abril 2022</p>
-                                <h3>Casa Blanca Mediterranea</h3>
-                                <p>Arquitectura mediterranea que celebra la luz natural.</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Awards Abril 2022</p>
+                                <h3 class="projectTitle">Casa Blanca Mediterranea</h3>
+                                <p class="projectDescription">Arquitectura mediterranea que celebra la luz natural.</p>
                             </div>
                         </a>
+
                     </article>
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/ComedorModerno.png" alt="Comedor Moderno">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/ComedorModerno.png" alt="Comedor Moderno">
                             </figure>
-                            <div>
-                                <p>Diseño Agosto 2023</p>
-                                <h3>Comedor Moderno</h3>
-                                <p>Un espacio elegante para compartir.</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Diseño Agosto 2023</p>
+                                <h3 class="projectTitle">Comedor Moderno</h3>
+                                <p class="projectDescription">Un espacio elegante para compartir.</p>
                             </div>
                         </a>
+
                     </article>
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/TorreMetropolitana.png" alt="Torre Metropolitana">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/TorreMetropolitana.png" alt="Torre Metropolitana">
                             </figure>
-                            <div>
-                                <p>Arquitectura Septiembre 2020</p>
-                                <h3>Torre Metropolitana</h3>
-                                <p>Un rascacielos que redefine el skyline.</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Arquitectura Septiembre 2020</p>
+                                <h3 class="projectTitle">Torre Metropolitana</h3>
+                                <p class="projectDescription">Un rascacielos que redefine el skyline.</p>
                             </div>
                         </a>
+
                     </article>
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/SalonMinimalista.png" alt="Salon Minimalista">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/SalonMinimalista.png" alt="Salon Minimalista">
                             </figure>
-                            <div>
-                                <p>Diseño Julio 2020</p>
-                                <h3>Salon Minimalista</h3>
-                                <p>Interiorismo basado en "menos es más".</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Diseño Julio 2020</p>
+                                <h3 class="projectTitle">Salon Minimalista</h3>
+                                <p class="projectDescription">Interiorismo basado en "menos es más".</p>
                             </div>
                         </a>
+
                     </article>
 
-                    <article>
-                        <a href="#">
-                            <figure>
-                                <img src="Assets/EstructuraIconica.png" alt="Estructura Iconica">
+                    <article class="projectCard">
+
+                        <a class="projectLink" href="#">
+                            <figure class="projectMedia">
+                                <img class="projectImage" src="Assets/EstructuraIconica.png" alt="Estructura Iconica">
                             </figure>
-                            <div>
-                                <p>Awards Junio 2023</p>
-                                <h3>Estructura Iconica</h3>
-                                <p>Estructura premiada que desafía convenciones.</p>
+
+                            <div class="projectContent">
+                                <p class="projectMeta">Awards Junio 2023</p>
+                                <h3 class="projectTitle">Estructura Iconica</h3>
+                                <p class="projectDescription">Estructura premiada que desafía convenciones.</p>
                             </div>
                         </a>
+
                     </article>
 
                 </section>
@@ -176,22 +212,29 @@
 
         </section>
 
-        <!-- BLOQUE CITA / FRASE -->
-        <blockquote>
-            <p>"La arquitectura es el testigo menos reconocido de la historia"</p>
-            <cite>Octavio Paz</cite>
+        <!-- FRASE -->
+        <blockquote class="quote">
+            <p class="quoteText">"La arquitectura es el testigo menos reconocido de la historia"</p>
+            <cite class="quoteAuthor">Octavio Paz</cite>
         </blockquote>
 
-        <!-- NEWSLETTER / SUSCRIPCIÓN -->
-        <section>
+        <!-- NEWSLETTER -->
+        <section class="newsletter">
 
-            <h2>Inspírate cada semana</h2>
-            <p>Recibe lo mejor de la arquitectura y el diseño directamente en tu correo</p>
+            <h2 class="newsletterTitle">Inspírate cada semana</h2>
 
-            <form>
-                <label>Correo</label>
-                <input type="email" placeholder="Tu correo">
-                <button>Inscribirse</button>
+            <p class="newsletterText">
+                Recibe lo mejor de la arquitectura y el diseño directamente en tu correo
+            </p>
+
+            <form class="newsletterForm">
+
+                <label class="newsletterLabel">Correo</label>
+
+                <input class="newsletterInput" type="email" placeholder="Tu correo">
+
+                <button class="newsletterButton">Inscribirse</button>
+
             </form>
 
         </section>
@@ -199,32 +242,33 @@
     </main>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="siteFooter">
 
-        <!-- BRAND -->
-        <section>
-            <img src="" alt="Architecture Life">
-            <p>
+        <section class="footerBrand">
+
+            <img class="footerLogo" src="" alt="Architecture Life">
+
+            <p class="footerText">
                 Un Museo Vivo de Admiración.<br>
                 Descubre, aprende e inspírate con una curaduría excepcional de arquitectura y diseño que transforma
                 espacios en experiencias memorables
             </p>
+
         </section>
 
-        <!-- NAV FOOTER -->
-        <nav>
+        <nav class="footerNav">
 
-            <ul>
-                <li><strong>Explorar</strong></li>
-                <li>Awards</li>
-                <li>Diseño</li>
-                <li>Arquitectura</li>
+            <ul class="footerList">
+                <li class="footerTitle">Explorar</li>
+                <li class="footerItem">Awards</li>
+                <li class="footerItem">Diseño</li>
+                <li class="footerItem">Arquitectura</li>
             </ul>
 
-            <ul>
-                <li><strong>Contacto</strong></li>
-                <li>info@architecturelife.com</li>
-                <li>+123 900 000 000</li>
+            <ul class="footerList">
+                <li class="footerTitle">Contacto</li>
+                <li class="footerItem">info@architecturelife.com</li>
+                <li class="footerItem">+123 900 000 000</li>
             </ul>
 
         </nav>
