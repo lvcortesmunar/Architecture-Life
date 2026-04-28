@@ -1,172 +1,193 @@
-/*layout*/
+/*-----------------------------------------layout*/
 body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
 
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
 
-  color: rgba(23, 21, 20, 1);
-  background-color: rgba(250, 250, 250, 0.5);
+    color: rgba(23, 21, 20, 1);
+    background-color: rgba(250, 250, 250, 0.5);
 }
 
 
-/* =========================
-   SITE HEADER
-========================= */
+/* --------------------------------- Barra de Navegacion*/
 .siteHeader {
-  /* Box Model */
-  padding: 16px;
+    /* Box Model */
+    padding: 16px;
 
-  /* Layout Interno */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    /* Layout Interno */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .mainNav .navList {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .navLink {
-  /* Apariencia */
-  color: rgb(137, 147, 137);
+    /* Apariencia */
+    color: rgb(137, 147, 137);
 }
 
-/* =========================
-   HERO
-========================= */
+/* --------------------------------- Hero*/
 .hero {
-  /* Box Model */
-  padding: 64px;
+    /* Box Model */
+    padding: 64px;
 
-  /* Layout Interno */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 90vh;
+    /* Layout Interno */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90vh;
 
-  /* Apariencia */
-  background-image:
-    linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
-    url(Assets/Hero4.png);
-  background-position: center;
-  background-repeat: no-repeat;
+    /* Apariencia */
+    background-image:
+        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
+        url(Assets/Hero4.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .heroTitle {
-  /* Apariencia */
-  font-size: 64px;
-  font-weight: lighter;
-  color: #fff;
+    /* Apariencia */
+    font-size: 64px;
+    font-weight: lighter;
+    color: #fff;
 }
 
 .heroText {
-  /* Apariencia */
-  font-size: 24px;
-  font-weight: lighter;
-  color: #fff;
+    /* Apariencia */
+    font-size: 24px;
+    font-weight: lighter;
+    color: #fff;
 }
 
 .heroButton {
-  /* Apariencia */
-  padding: 12px;
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  width: fit-content;
+    /* Apariencia */
+    padding: 12px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    width: fit-content;
 }
 
-/* =========================
-   PROJECTS SECTION
-========================= */
+/* --------------------------------- Inspiran*/
 .projects {
-  /* Box Model */
-  padding-top: 144px;
+    /* Box Model */
+    padding-top: 144px;
 }
 
-.projectsArchive {
-  /* Apariencia */
-  background-color: rgba(244, 240, 237, 0.5);
-}
 
-/* =========================
-   PROJECTS FEATURED
-========================= */
+
 .projectsFeatured {
-  /* Box Model */
-  padding: 32px 64px 64px 64px;
+    /* Box Model */
+    padding: 32px 64px 64px 64px;
 
-  /* Layout Interno */
-  display: flex;
-  gap: 20px;
-  align-items: stretch;
+    /* Layout Interno */
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
 }
 
 .projectCard {
-  /* Apariencia */
-  background-color: #fff;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Apariencia */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .projectCard--featured {
-  flex: 3;
+    flex: 3;
 }
 
 .projectCard--secondary {
-  flex: 1;
+    flex: 1;
 }
 
-/* =========================
-   PROJECTS GRID
-========================= */
+/*--------------------------Nunca Pasan De Moda*/
+.projectsArchive {
+    /* Box Model */
+    padding-bottom: 144px;
+
+    /* Apariencia */
+    background-color: rgba(244, 240, 237, 0.5);
+}
+
 .projectsGrid {
-  /* Box Model */
-  padding: 32px 64px 64px 64px;
+    /* Box Model */
+    padding: 32px 64px 64px 64px;
 
-  /* Layout Interno */
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+    /* Layout Interno */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
 }
 
-/* =========================
-   PROJECT CONTENT
-========================= */
+.projectCard {
+    /*Box Model*/
+    padding-bottom: 88px;
+    /*Apariencia*/
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
 .projectContent {
-  /* Box Model */
-  padding: 24px;
+    /* Box Model */
+    padding: 24px;
 }
 
-/* =========================
-   QUOTE SECTION
-========================= */
+.projectCard.One{
+    grid-column: span 2 / span 2;
+}
+.projectCard.Two{
+    grid-column: span 2 / span 2;
+  grid-column-start: 3;
+}
+.projectCard.Three{
+     grid-column: span 2 / span 2;
+  grid-column-start: 5;
+}
+.projectCard.Four{
+      grid-column: span 3 / span 3;
+  grid-row-start: 2;
+}
+.projectCard.Five{
+     grid-column: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.projectCard.Six{
+      grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+
+/* --------------------------------- Frase Arquitectonica*/
 .quote {
-  /* Box Model */
-  padding: 144px 0;
+    /* Box Model */
+    padding: 144px 0;
 
-  /* Apariencia */
-  background-image:
-    linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
-    url(Assets/OctavioPaz.png);
-  background-position: center;
-  background-size: cover;
+    /* Apariencia */
+    background-image:
+        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
+        url(Assets/OctavioPaz.png);
+    background-position: center;
+    background-size: cover;
 }
 
-/* =========================
-   NEWSLETTER
-========================= */
+/* --------------------------------- Newsletter*/
 .newsletter {
-  /* Box Model */
-  padding: 144px 0;
+    /* Box Model */
+    padding: 144px 0;
 }
 
-/* =========================
-   SITE FOOTER
-========================= */
+/* --------------------------------- Footer*/
 .siteFooter {
-  /* Box Model */
-  padding: 64px;
+    /* Box Model */
+    padding: 64px;
 }
