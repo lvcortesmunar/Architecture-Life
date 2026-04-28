@@ -1,60 +1,50 @@
-/* =========================================
-   1. RESET PREESTABLECIDO + BASE GLOBAL
-========================================= */
+/*-----------------------------------------layout*/
 body {
-    /* Reset */
-    margin: 0;
-
-    /* 2. Layout de etiquetas */
     width: 100%;
     height: 100%;
+    margin: 0;
 
-    /* 5. Apariencia */
-    color: rgba(23, 21, 20, 1);
-    background-color: rgba(250, 250, 250, 0.5);
-
-    /* 6. Contenido / Personalización */
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
+
+    color: rgba(23, 21, 20, 1);
+    background-color: rgba(250, 250, 250, 0.5);
 }
-/* ------------------------------------------   BARRA DE NAVEGACIÓN
- ------------------------------------------ */
+
+
+/* --------------------------------- Barra de Navegacion*/
 .siteHeader {
-    /* 3. Box Model */
+    /* Box Model */
     padding: 16px;
 
-    /* 4. Layout Interno */
+    /* Layout Interno */
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .mainNav .navList {
-    /* 4. Layout Interno */
     display: flex;
     gap: 1rem;
 }
 
 .navLink {
-    /* 5. Apariencia */
+    /* Apariencia */
     color: rgb(137, 147, 137);
 }
 
-/*  ------------------------------------------   HERO
- ------------------------------------------ */
+/* --------------------------------- Hero*/
 .hero {
-    /* 2. Layout de etiquetas */
-    height: 90vh;
-
-    /* 3. Box Model */
+    /* Box Model */
     padding: 64px;
 
-    /* 4. Layout Interno */
+    /* Layout Interno */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 90vh;
 
-    /* 5. Apariencia */
+    /* Apariencia */
     background-image:
         linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
         url(Assets/Hero4.png);
@@ -62,108 +52,62 @@ body {
     background-repeat: no-repeat;
 }
 
-/* -------- Contenido HERO -------- */
 .heroTitle {
-    /* 5. Apariencia */
-    color: #fff;
-    /* 6. Contenido */
+    /* Apariencia */
     font-size: 64px;
     font-weight: lighter;
-
+    color: #fff;
 }
 
 .heroText {
-    /* 5. Apariencia */
-    color: #fff;
-    /* 6. Contenido */
+    /* Apariencia */
     font-size: 24px;
     font-weight: lighter;
-
+    color: #fff;
 }
 
 .heroButton {
-    /* 2. Layout */
-    width: fit-content;
-
-    /* 3. Box Model */
+    /* Apariencia */
     padding: 12px;
-
-    /* 5. Apariencia */
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-
+    width: fit-content;
 }
 
-/*  ------------------------------------------   PROYECTOS
- ------------------------------------------ */
+/* --------------------------------- Inspiran*/
 .projects {
-    /* 3. Box Model */
+    /* Box Model */
     padding-top: 144px;
 }
 
-.sectionTitle {
-    /* 6. Contenido */
-    font-size: 32px;
-}
 
-/* -------- Contenido Cards -------- */
-.projectContent {
-    /* 3. Box Model */
-    padding: 24px;
-}
 
-.projectTitle {
-    /* 6. Contenido */
-    font-size: 24px;
-    font-weight: lighter;
-}
-
-.projectDescription {
-    /* 6. Contenido */
-    font-size: 16px;
-}
-
-.projectMeta {
-    /* 5. Apariencia */
-    color: gray;
-    
-    /* 6. Contenido */
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 12px;
-
-}
-
-/*  ------------------------------------------   PROYECTOS DESTACADOS
- ------------------------------------------ */
 .projectsFeatured {
-    /* 3. Box Model */
-    padding: 32px 64px 32px 64px;
+    /* Box Model */
+    padding: 32px 64px 64px 64px;
 
-    /* 4. Layout Interno */
+    /* Layout Interno */
     display: flex;
     gap: 20px;
     align-items: stretch;
 }
 
 .projectCard {
-    /* 5. Apariencia */
+    /* Apariencia */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .projectCard--featured {
-    /* 4. Layout Interno */
     flex: 3;
 }
 
 .projectCard--secondary {
-    /* 4. Layout Interno */
     flex: 1;
 }
 
-/*  ------------------------------------------   PROYECTOS ARCHIVE
- ------------------------------------------ */
+/*--------------------------Nunca Pasan De Moda*/
 .projectsArchive {
     /* 3. Box Model */
     padding-bottom: 144px;
@@ -180,6 +124,7 @@ body {
 
 .projectsGrid {
     /* 3. Box Model */
+     
     padding: 32px 64px 32px 64px;
 
     /* 4. Layout Interno */
@@ -188,43 +133,49 @@ body {
     gap: 16px;
 }
 
-/* -------- Posicionamiento GRID -------- */
-.projectCard.One {
-    grid-column: span 2;
+.projectCard {
+    /*Apariencia*/
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
 }
 
-.projectCard.Two {
-    grid-column: span 2;
-    grid-column-start: 3;
+.projectContent {
+    /* Box Model */
+    padding: 24px;
 }
 
-.projectCard.Three {
-    grid-column: span 2;
-    grid-column-start: 5;
+.projectCard.One{
+    grid-column: span 2 / span 2;
 }
-
-.projectCard.Four {
-    grid-column: span 3;
-    grid-row-start: 2;
+.projectCard.Two{
+    grid-column: span 2 / span 2;
+  grid-column-start: 3;
 }
-
-.projectCard.Five {
-    grid-column: span 3;
-    grid-column-start: 4;
-    grid-row-start: 2;
+.projectCard.Three{
+     grid-column: span 2 / span 2;
+  grid-column-start: 5;
 }
-
-.projectCard.Six {
-    grid-column: span 4;
-    grid-column-start: 2;
-    grid-row-start: 3;
+.projectCard.Four{
+      grid-column: span 3 / span 3;
+  grid-row-start: 2;
+}
+.projectCard.Five{
+     grid-column: span 3 / span 3;
+  grid-column-start: 4;
+  grid-row-start: 2;
+}
+.projectCard.Six{
+      grid-column: span 4 / span 4;
+  grid-column-start: 2;
+  grid-row-start: 3;
 }
 
 /* -------- Media -------- */
 .projectMediaModa {
     /* 2. Layout */
     width: 100%;
-    height: 80%;
+     height: 400px;
 
     /* 5. Apariencia */
     overflow: hidden;
@@ -240,88 +191,82 @@ body {
     display: block;
 }
 
-/*  ------------------------------------------   FRASE ARQUITECTÓNICA
- ------------------------------------------ */
+
+/* --------------------------------- Frase Arquitectonica*/
 .quote {
-    /* 3. Box Model */
+    /* Box Model */
     padding: 144px 0;
 
-    /* 4. Layout Interno */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    /* 5. Apariencia */
+    /* Apariencia */
     background-image:
         linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
         url(Assets/OctavioPaz.png);
     background-position: center;
     background-size: cover;
-    /* 6. Contenido */
-    text-align: center;
-
 }
 
-.quoteText {
-    /* 5. Apariencia */
-    color: #fff;
-    /* 6. Contenido */
-    font-size: 64px;
-    font-weight: lighter;
-
-}
-
-/*  ------------------------------------------   NEWSLETTER
- ------------------------------------------ */
+/* --------------------------------- Newsletter*/
 .newsletter {
-    /* 2. Layout */
-    width: 100%;
-
-    /* 3. Box Model */
-    padding-top: 144px;
-    padding-bottom: 144px;
-
-
-    /* 4. Layout Interno */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    /* 5. Apariencia */
-    background-color: rgba(244, 240, 237, 0.5);
-
-    /* 6. Contenido */
-    text-align: center;
-
+    /* Box Model */
+    padding: 144px 0;
 }
 
-.newsletterText {
-    /* 6. Contenido */
-    font-size: 16px;
-}
-
-/*  ------------------------------------------   FOOTER
- ------------------------------------------ */
+/* --------------------------------- Footer*/
 .siteFooter {
-    /* 3. Box Model */
-    padding: 64px;
+  background-color: #111;
+  color: #eee;
+  padding: 50px 30px;
+  font-family: 'Segoe UI', sans-serif;
 
-    /*4. Layout Interno*/
-    
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 8px;
-
-  
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
-.footerTitle {
-    /* 6. Contenido */
-    font-weight: bold;
+/* Marca / descripción */
+.footerBrand {
+  max-width: 400px;
+}
+
+.footerLogo {
+  width: 160px;
+  margin-bottom: 20px;
 }
 
 .footerText {
-    /* 6. Contenido */
-    font-size: 14px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #bbb;
 }
+
+/* Navegación */
+.footerNav {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.footerList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerTitle {
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.footerBottom {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 13px;
+  color: #888;
+}
+
