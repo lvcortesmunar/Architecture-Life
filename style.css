@@ -305,6 +305,15 @@ body {
 .siteFooter {
     /* 3. Box Model */
     padding: 64px;
+
+    /*4. Layout Interno*/
+    
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+
+  
 }
 
 .footerTitle {
