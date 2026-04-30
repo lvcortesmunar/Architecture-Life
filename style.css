@@ -1,7 +1,5 @@
 /*-----------------------------------------layout*/
 body {
-    width: 100%;
-    height: 100%;
     margin: 0;
 
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -15,88 +13,116 @@ body {
 /* --------------------------------- Barra de Navegacion*/
 .siteHeader {
     /* Box Model */
-    padding: 16px;
+    padding: 20px 32px;
 
     /* Layout Interno */
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
 }
 
 .mainNav .navList {
-    display: flex;
-    gap: 1rem;
+     display: flex;
+    gap: 20px;
 }
 
 .navLink {
-    /* Apariencia */
-    color: rgb(137, 147, 137);
+     color: rgb(137, 147, 137);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: #000;
+}
+
+.logoImage {
+    height: 40px;
 }
 
 /* --------------------------------- Hero*/
 .hero {
     /* Box Model */
     padding: 64px;
+    height: 90vh;
 
     /* Layout Interno */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90vh;
 
     /* Apariencia */
     background-image:
-        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 0)),
+          linear-gradient(rgba(50,50,50,0.4), rgba(50,50,50,0.2)),
         url(Assets/Hero4.png);
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: center;
 }
 
 .heroTitle {
-    /* Apariencia */
+   
     font-size: 64px;
     font-weight: lighter;
     color: #fff;
+    
 }
 
 .heroText {
-    /* Apariencia */
+    
     font-size: 24px;
-    font-weight: lighter;
     color: #fff;
+    
 }
 
 .heroButton {
-    /* Apariencia */
-    padding: 12px;
+      margin-top: 20px;
+    padding: 12px 20px;
+
     border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
     color: #fff;
+
     width: fit-content;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+.heroButton:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* --------------------------------- Inspiran*/
 .projects {
-    /* Box Model */
-    padding-top: 144px;
+    padding-top: 72px;
 }
 
+.sectionHeader {
+    padding: 32px 0px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
 
+.sectionTitle {
+    font-size: 32px;
+    font-weight: lighter;
+}
 
 .projectsFeatured {
-    /* Box Model */
-    padding: 32px 64px 64px 64px;
-
-    /* Layout Interno */
+    padding: 32px 64px 64px;
     display: flex;
     gap: 20px;
-    align-items: stretch;
 }
 
 .projectCard {
-    /* Apariencia */
     background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.projectCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .projectCard--featured {
@@ -107,31 +133,23 @@ body {
     flex: 1;
 }
 
+.projectContent {
+    padding: 24px;
+}
+
 /*--------------------------Nunca Pasan De Moda*/
 .projectsArchive {
-    /* 3. Box Model */
     padding-bottom: 144px;
-
-    /* 4. Layout Interno */
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-
-    /* 5. Apariencia */
     background-color: rgba(244, 240, 237, 1);
-    overflow: hidden;
 }
 
 .projectsGrid {
-    /* 3. Box Model */
-
-    padding: 32px 64px 32px 64px;
-
-    /* 4. Layout Interno */
+    padding: 32px 64px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
 }
+
 
 .projectCard {
     /*Apariencia*/
@@ -171,6 +189,7 @@ body {
 }
 
 .projectCard.Six {
+    padding: 0px 0px;
     grid-column: span 4 / span 4;
     grid-column-start: 2;
     grid-row-start: 3;
@@ -178,53 +197,43 @@ body {
 
 /* -------- Media -------- */
 .projectMediaModa {
-    /* 2. Layout */
     width: 100%;
-    height: 400px;
-
-    /* 5. Apariencia */
+    height: 200px;
     overflow: hidden;
 }
 
 .projectMediaModa img {
-    /* 2. Layout */
     width: 100%;
     height: 100%;
-
-    /* 5. Apariencia */
     object-fit: cover;
-    display: block;
+    transition: transform 0.5s ease;
+}
+
+.projectCard:hover img {
+    transform: scale(1.05);
 }
 
 
 /* --------------------------------- Frase Arquitectonica*/
 .quote {
-    /* Box Model */
     padding: 144px 64px;
-
-    /* LayOut interno*/
     text-align: center;
 
-    /* Apariencia */
     background-image:
-        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 1)),
+        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0,0,0,1)),
         url(Assets/OctavioPaz.png);
-    background-position: center;
+
     background-size: cover;
     color: #fff;
-
 }
 
 .quoteText {
     font-size: 40px;
     font-weight: bold;
-
 }
 
 .quoteAuthor {
     font-size: 16px;
-    font-weight: lighter;
-
 }
 
 /* --------------------------------- Newsletter*/
@@ -233,7 +242,6 @@ body {
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 
     background-color: rgba(244, 240, 237, 1);
@@ -242,52 +250,55 @@ body {
 .newsletterTitle {
     font-size: 40px;
     font-weight: lighter;
-    color: #000;
     margin-bottom: 10px;
 }
 
 .newsletterText {
-    font-size: 16px;
-    font-weight: lighter;
-    color: rgba(100, 100, 100, 1);
+    color: #666;
     margin-bottom: 24px;
 }
 
 .newsletterForm {
     display: flex;
-    align-items: center;
     gap: 10px;
+    align-items: center;
 
     padding: 24px;
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
 
 .newsletterInput {
     flex: 1;
     min-width: 220px;
 
-    height: 40px;
     padding: 12px;
-
-    border-radius: 4px;
     border: 1px solid #ddd;
+    border-radius: 4px;
+}
 
-    font-size: 14px;
+.newsletterInput:focus {
+    outline: none;
+    border-color: #000;
 }
 
 .newsletterButton {
     padding: 12px 20px;
 
-    border-radius: 4px;
     border: none;
+    border-radius: 4px;
 
     background-color: #000;
     color: #fff;
 
     cursor: pointer;
-    
+    transition: 0.3s;
+}
+
+.newsletterButton:hover {
+    background-color: #333;
 }
 
 /* --------------------------------- Footer*/
@@ -295,7 +306,6 @@ body {
     background-color: #111;
     color: #eee;
     padding: 50px 30px;
-    font-family: 'Segoe UI', sans-serif;
 
     display: flex;
     justify-content: space-between;
@@ -303,7 +313,6 @@ body {
     gap: 40px;
 }
 
-/* Marca / descripción */
 .footerBrand {
     max-width: 400px;
 }
@@ -311,12 +320,6 @@ body {
 .footerLogo {
     width: 160px;
     margin-bottom: 20px;
-
-      background-image:
-       
-        url(Assets/Logo\ 2.png);
-    background-position: center;
-    background-size: cover;
 }
 
 .footerText {
@@ -325,32 +328,28 @@ body {
     color: #bbb;
 }
 
-/* Navegación */
 .footerNav {
     display: flex;
     gap: 60px;
-    flex-wrap: wrap;
 }
 
 .footerList {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 .footerTitle {
     font-weight: 600;
     margin-bottom: 15px;
-    font-size: 16px;
     color: #fff;
 }
 
 .footerBottom {
     width: 100%;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     margin-top: 40px;
     padding-top: 20px;
-    font-size: 13px;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
     color: #888;
 }
