@@ -1,355 +1,269 @@
-/*-----------------------------------------layout*/
+/* ================= BASE ================= */
 body {
     margin: 0;
-
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 1.5;
-
     color: rgba(23, 21, 20, 1);
     background-color: rgba(250, 250, 250, 0.5);
 }
 
-
-/* --------------------------------- Barra de Navegacion*/
-.siteHeader {
-    /* Box Model */
-    padding: 20px 32px;
-
-    /* Layout Interno */
+/* ================= HEADER ================= */
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    padding: 20px 32px;
     border-bottom: 1px solid #eee;
     background-color: #fff;
 }
 
-.mainNav .navList {
-     display: flex;
+.nav__list {
+    display: flex;
     gap: 20px;
+    list-style: none;
 }
 
-.navLink {
-     color: rgb(137, 147, 137);
+.nav__link {
+    color: rgb(137, 147, 137);
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.navLink:hover {
+.nav__link:hover {
     color: #000;
 }
 
-.logoImage {
+.header__logo-image {
     height: 40px;
 }
 
-/* --------------------------------- Hero*/
+/* ================= HERO ================= */
 .hero {
-    /* Box Model */
-    padding: 64px;
-    height: 90vh;
-
-    /* Layout Interno */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 64px;
+    height: 90vh;
 
-    /* Apariencia */
     background-image:
-          linear-gradient(rgba(50,50,50,0.4), rgba(50,50,50,0.2)),
+        linear-gradient(rgba(50, 50, 50, 0.4), rgba(50, 50, 50, 0.2)),
         url(Assets/Hero4.png);
+
+    background-size: cover;
     background-position: center;
-    background-repeat: center;
 }
 
-.heroTitle {
-   
+.hero__title {
     font-size: 64px;
     font-weight: lighter;
     color: #fff;
-    
 }
 
-.heroText {
-    
+.hero__text {
     font-size: 24px;
     color: #fff;
-    
 }
 
-.heroButton {
-      margin-top: 20px;
+.hero__button {
+    margin-top: 20px;
     padding: 12px 20px;
-
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-
     width: fit-content;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
     text-decoration: none;
-    transition: background 0.3s ease;
-}
-.heroButton:hover {
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* --------------------------------- Inspiran*/
-.projects {
-    padding-top: 72px;
+.hero__button:hover {
+    background: rgba(0, 0, 0, 0.8);
 }
 
-.sectionHeader {
-    padding: 32px 0px;
-    text-align: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.sectionTitle {
+/* ================= SECTION TITLE ================= */
+.section__title {
     font-size: 32px;
     font-weight: lighter;
+    text-align: center;
 }
 
-.projectsFeatured {
-    padding: 32px 64px 64px;
+/* ================= PROJECTS ================= */
+.projects__featured {
     display: flex;
     gap: 20px;
+    padding: 32px 64px 64px;
 }
 
-.projectCard {
-    background-color: #fff;
-    transition: all 0.3s ease;
+.card {
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
 }
 
-.projectCard:hover {
+.card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
-.projectCard--featured {
+.card__content {
+    padding: 24px;
+}
+
+.card--featured {
     flex: 3;
 }
 
-.projectCard--secondary {
+.card--secondary {
     flex: 1;
 }
 
-.projectContent {
-    padding: 24px;
-}
-
-/*--------------------------Nunca Pasan De Moda*/
-.projectsArchive {
-    padding-bottom: 144px;
-    background-color: rgba(244, 240, 237, 1);
-}
-
-.projectsGrid {
-    padding: 32px 64px;
+/* ================= GRID ================= */
+.projects__grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 16px;
+    padding: 32px 64px;
 }
 
-
-.projectCard {
-    /*Apariencia*/
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-
+/* ===== KEEP ORIGINAL GRID MODIFIERS ===== */
+.card.One {
+    grid-column: span 2;
 }
 
-.projectContent {
-    /* Box Model */
-    padding: 24px;
+.card.Two {
+    grid-column: 3 / span 2;
 }
 
-.projectCard.One {
-    grid-column: span 2 / span 2;
+.card.Three {
+    grid-column: 5 / span 2;
 }
 
-.projectCard.Two {
-    grid-column: span 2 / span 2;
-    grid-column-start: 3;
+.card.Four {
+    grid-column: span 3;
+    grid-row: 2;
 }
 
-.projectCard.Three {
-    grid-column: span 2 / span 2;
-    grid-column-start: 5;
+.card.Five {
+    grid-column: 4 / span 3;
+    grid-row: 2;
 }
 
-.projectCard.Four {
-    grid-column: span 3 / span 3;
-    grid-row-start: 2;
+.card.Six {
+    grid-column: 2 / span 4;
+    grid-row: 3;
 }
 
-.projectCard.Five {
-    grid-column: span 3 / span 3;
-    grid-column-start: 4;
-    grid-row-start: 2;
-}
-
-.projectCard.Six {
-    padding: 0px 0px;
-    grid-column: span 4 / span 4;
-    grid-column-start: 2;
-    grid-row-start: 3;
-}
-
-/* -------- Media -------- */
-.projectMediaModa {
-    width: 100%;
+/* ================= MEDIA ================= */
+.card__media--grid {
     height: 200px;
     overflow: hidden;
 }
 
-.projectMediaModa img {
+.card__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
 }
 
-.projectCard:hover img {
-    transform: scale(1.05);
-}
-
-
-/* --------------------------------- Frase Arquitectonica*/
+/* ================= QUOTE ================= */
 .quote {
     padding: 144px 64px;
     text-align: center;
-
-    background-image:
-        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0,0,0,1)),
-        url(Assets/OctavioPaz.png);
-
-    background-size: cover;
     color: #fff;
+    background-image:
+        linear-gradient(rgba(157, 157, 157, 0.3), rgba(0, 0, 0, 1)),
+        url(Assets/OctavioPaz.png);
+    background-size: cover;
 }
 
-.quoteText {
+.quote__text {
     font-size: 40px;
-    font-weight: bold;
 }
 
-.quoteAuthor {
+.quote__author {
     font-size: 16px;
 }
 
-/* --------------------------------- Newsletter*/
+/* ================= NEWSLETTER ================= */
 .newsletter {
-    padding: 144px 0;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    background-color: rgba(244, 240, 237, 1);
+    padding: 144px 0;
+    background: rgba(244, 240, 237, 1);
 }
 
-.newsletterTitle {
+.newsletter__title {
     font-size: 40px;
     font-weight: lighter;
     margin-bottom: 10px;
 }
 
-.newsletterText {
+.newsletter__text {
     color: #666;
     margin-bottom: 24px;
 }
 
-.newsletterForm {
+.newsletter__form {
     display: flex;
     gap: 10px;
-    align-items: center;
-
     padding: 24px;
-    background-color: #fff;
-    border-radius: 8px;
-
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    background: #fff;
 }
 
-.newsletterInput {
-    flex: 1;
-    min-width: 220px;
-
+.newsletter__input {
     padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
 }
 
-.newsletterInput:focus {
-    outline: none;
-    border-color: #000;
-}
-
-.newsletterButton {
+.newsletter__button {
     padding: 12px 20px;
-
-    border: none;
-    border-radius: 4px;
-
-    background-color: #000;
+    background: #000;
     color: #fff;
+    border-radius: 8px;
 
-    cursor: pointer;
-    transition: 0.3s;
 }
 
-.newsletterButton:hover {
-    background-color: #333;
-}
-
-/* --------------------------------- Footer*/
-.siteFooter {
-    background-color: #111;
-    color: #eee;
-    padding: 50px 30px;
-
+/* ================= FOOTER ================= */
+.footer {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
+    justify-content: space-between;
+    padding: 50px 30px;
+    background: #111;
+    color: #eee;
 }
 
-.footerBrand {
-    max-width: 400px;
+.footer__brand {
+    flex: 1;
+    min-width: 200px;
 }
-
-.footerLogo {
+.footer__logo {
     width: 160px;
-    margin-bottom: 20px;
 }
 
-.footerText {
-    font-size: 14px;
-    line-height: 1.7;
+.footer__text {
     color: #bbb;
 }
 
-.footerNav {
+.footer__nav {
     display: flex;
     gap: 60px;
+    flex: 2;
+    justify-content: flex-end;
 }
 
-.footerList {
+.footer__list {
     list-style: none;
-    padding: 0;
 }
 
-.footerTitle {
-    font-weight: 600;
+.footer__title {
     margin-bottom: 15px;
+    font-weight: bold;
     color: #fff;
 }
 
-.footerBottom {
+.footer__bottom {
     width: 100%;
     text-align: center;
     margin-top: 40px;
-    padding-top: 20px;
-
     border-top: 1px solid rgba(255,255,255,0.1);
-    color: #888;
 }
+
+
+
